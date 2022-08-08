@@ -1,0 +1,11 @@
+import {Router} from "express";
+import multer from "multer";
+import BookController from "../controller/bookController";
+const upload = multer();
+export const router = Router();
+router.get('/book/list', BookController.showListBook);
+router.get('/book/create' ,BookController.showCreateBook);
+router.post('/book/create', upload.none(), BookController.createBook);
+router.get('/book/update/:id', BookController.editBook);
+router.post('/book/update/:id',upload.none(), BookController.updateBook);
+router.get('/book/delete/:id', BookController.deleteBook);
