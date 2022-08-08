@@ -19,6 +19,12 @@
 
         };
     </script>
+    <style>
+        body {
+            font-color: yellowgreen;
+            color: blue;
+        }
+    </style>
 
 </head>
 
@@ -48,7 +54,7 @@
 
     <button onclick="update('<%= book.id %>')">Update</button>
 
-        <a href="/book/delete/<%= book.id %>">Delete</a>
+        <a href="/book/delete/<%= book.id %>" style="color: red">Delete</a>
     </br>
 
 <% } %>
